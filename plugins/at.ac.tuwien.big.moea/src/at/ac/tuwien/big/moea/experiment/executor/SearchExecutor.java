@@ -275,7 +275,7 @@ public class SearchExecutor extends Executor {
          final TerminationCondition terminationCondition) {
       final NondominatedPopulation result = newArchivePopulation();
       try {
-         final Algorithm algorithm = createAlgorithm(problem);
+         this.algorithm = createAlgorithm(problem);
 
          // Create any initial conditions for termination condition
          terminationCondition.initialize(algorithm);
